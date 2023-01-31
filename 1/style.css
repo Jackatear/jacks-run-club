@@ -1,0 +1,295 @@
+html {
+    font-family: lobster;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 220vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.test {
+    position: absolute;
+    top: 30px;
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    z-index: 300;
+}
+.app-container {
+    position: fixed;
+    width: clamp(80vw, 1200px, 90vw);
+}
+
+h1 {
+    position: absolute;
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    top: -1050px;
+    right: 0;
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    transition: 0.2s;
+    z-index: 12;
+}
+.sun {  
+    position: absolute;
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: -10000px;
+    height: 200px;
+    width: 200px;
+    border-radius: 1000px;
+    background-color: rgb(255, 255, 144);
+    z-index: 1;
+    transition: 0.7s;
+}
+
+.star {
+    height: 3px;
+    width: 3px;
+    background-color: white;
+    border-radius: 200px;
+    position: absolute;
+    visibility: hidden;
+}
+.one {
+    top: 20px;
+    right: 100px;
+}
+.two {
+    top: 15px; 
+    right: 800px;
+}
+.three {
+    top: 200px;
+    right: 60px;
+    height: 6px;
+    width: 6px;
+}
+.four {
+    top: 30px;
+    right: 90px;
+}
+.five {
+    top: 200px;
+    left: 15px;
+    height: 8px;
+    width: 8px;
+}
+
+.mountain-container {
+    background: rgb(199, 235, 255);
+    height: 400px;
+    position: relative;
+    border-bottom: 10px solid rgb(35, 81, 35);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.mountain-1 {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 30px;
+    border-top: 0px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 280px solid rgb(91, 150, 91);
+    border-left: 80px solid transparent;
+    z-index: 4;
+}
+.mountain-1-shadow {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 110px;
+    border-top: 0px solid transparent;
+    border-right: 60px solid transparent;
+    border-left: 0px solid transparent;
+    border-bottom: 280px solid lightgreen;
+    transform-origin: top right;
+    transform: skewX(10deg);
+    z-index: 5;
+}
+
+.mountain-2 {
+    position: absolute;
+    content: 0;
+    z-index: 1;
+    bottom: 0;
+    left: 200px;
+    border-top: 0px solid transparent;
+    border-right: 80px solid transparent;
+    border-left: 88px solid transparent;
+    border-bottom: 350px solid darkgreen;
+}
+.mountain-2-shadow {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 288px;
+    border-top: 0px solid transparent;
+    border-right: 60px solid transparent;
+    border-left: 0px solid transparent;
+    border-bottom: 350px solid rgb(100, 155, 100);
+    z-index: 2;
+    transform-origin: top right;
+    transform: skewX(8deg);
+}
+
+.mountain-3 {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 100px;
+    border-top: 20px solid transparent;
+    border-right: 180px solid transparent;
+    border-left: 190px solid transparent;
+    border-bottom: 300px solid darkolivegreen;
+}
+.mountain-3-shadow {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 277px;
+    border-top: 20px solid transparent;
+    border-right: 0 solid transparent;
+    border-left: 190px solid transparent;
+    border-bottom: 300px solid rgb(75, 93, 72);
+    transform-origin: top right;
+    transform: skewX(-10deg);
+}
+
+.mountain-5 {
+    position: absolute;
+    z-index: 4;
+    content: '';
+    bottom: 0;
+    right: 40px;
+    border-top: 0px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 280px solid rgb(91, 150, 91);
+    border-left: 80px solid transparent;
+}
+.mountain-5-shadow {
+    position: absolute;
+    z-index: 5;
+    content: '';
+    bottom: 0;
+    right: 120px;
+    border-top: 0px solid transparent;
+    border-right: 0px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 280px solid lightgreen;
+    transform-origin: top right;
+    transform: skewX(-10deg);
+}
+
+.person {
+    z-index: 3;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(217, 221, 199);
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    transition: 1s;
+}
+.person::before {
+    content: '';
+    display: block;
+    background-color: brown;
+    width: 100%;
+    height: 4px;
+}
+.person-2 {
+    z-index: 3;
+    height: 25px;
+    width: 10px;
+    background-color: rgb(113, 32, 154);
+    position: absolute;
+    bottom: 0;
+    left: 900px;
+    transition: 0.3s;
+}
+.person-2::before {
+    content: '';
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 4px;
+    margin-top: 4px;
+}
+
+.person-3 {
+    z-index: 3;
+    height: 60px;
+    width: 20px;
+    background-color: rgb(148, 148, 224);
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    transition: 2s;
+}
+.person-3::after {
+    content: '';
+    background-color: red;
+    height: 10px;
+    width: 100%;
+    display: block;
+}
+
+.form-container {
+    margin-top: 20px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    width: clamp(60vw, 800px, 70vw);
+    margin-left: auto;
+    margin-right: auto;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-container * {
+    font-family: Helvetica, sans-serif;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+}
+
+.email-input {
+    width: 100%;
+    display: flex;
+}
+.email-input label {
+    flex: 1;
+}
+.email-input input {
+    flex: 5;
+}
+button {
+    margin: 10px;
+    width: 98%;
+}
